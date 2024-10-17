@@ -15,9 +15,15 @@
     <script>
         function showAlertName() {
             // lengkapi fungsi ini untuk dapat menampilkan alert yang berisikan
+    
             // nama depan dan nama belakang sesuai dengan yang diinputkan
             // pada input
-        }
+            button.onclick =function () {
+                var firstName = document.getElementById('depan').value;
+                var lastName = document.getElementById('belakang').value;
+                alert('Nama Anda: ' + firstName + ' ' + lastName);
+            };
+        };
     </script>
 </body>
 

@@ -15,10 +15,10 @@
     <p>Masukkan nilai diameter untuk menghitung volume bola</p>
     <form action="" method="post" id="form">
         <label for="diameter">Diameter</label>
-        <input type="text" name="diameter" id="diameter" required>
+        <input type="number" name="diameter" id="diameter" required>
         
         <label for="volume">Volume</label>
-        <input type="text" name="volume" id="volume">
+        <input type="number" name="volume" id="volume">
         
         <input type="submit" value="Hitung" id="submit">
     </form>
@@ -28,6 +28,20 @@
         // berdasarkan nilai diameter yang dimasukkan.
         // Nilai volume akan muncul pada isian Volume setelah tombol
         // hitung ditekan.
+        var button = document.getElementById("submit");
+
+        button.onclick = function () {
+            var diameter = document.getElementById("diameter").value;
+            if (diameter > 0) {
+                var radius = diameter / 2;
+                var volume = (4/3) * Math.PI * Math.pow(radius, 3);
+                document.getElementById("volume").value = volume.toFixed(2);
+            } else {
+                alert("Masukkan nilai diameter yang valid!");
+            }
+        };
+            
+
     </script>
 </body>
 

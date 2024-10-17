@@ -4,13 +4,24 @@
     <title>Soal 1</title>
 </head>
 <body>
-    <p id="teks">Rekayasa Perangkat Lunak</p>
+    <p id="paragraf">Rekayasa Perangkat Lunak</p>
     <button id="tombol">Tombol</button>
 
     <script>
         // tambahkan skrip javascript di sini
+        let button = document.getElementById("tombol");
+        
+        console.info(document);
         // untuk mengubah ukuran dan warna dari teks
+        button.onclick = function () {
+            paragraf1.style.fontFamily = "cursive";
+            paragraf1.style.color = "blue";
+
+        };
         // "Rekayasa Perangkat Lunak"
+        const paragraf1 = document.getElementById("paragraf");
+
+        console.info(paragraf1.innerText);
 
         
     </script>
